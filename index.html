@@ -1,46 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alejandro Garay | Portafolio Profesional</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alejandro Garay — Portafolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333; }
-    header { background: #003366; color: white; text-align: center; padding: 2rem 1rem; }
-    section { max-width: 800px; margin: 2rem auto; padding: 1rem; background: white; border-radius: 8px; }
-    h1, h2 { color: #003366; }
-    a { color: #003366; text-decoration: none; }
-    footer { text-align: center; padding: 1rem; font-size: 0.9em; color: #666; }
+    :root{
+      --bg:#0b0f12;
+      --card:#0f1417;
+      --accent:#ff8a00;
+      --muted:#9aa3a8;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      --mono: "Roboto Mono", monospace;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#080a0b 0%, #0b0f12 100%);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    .wrap{max-width:var(--maxw);margin:24px auto;padding:24px;}
+    header{display:flex;gap:20px;align-items:center;padding:18px;border-radius:10px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.008));box-shadow:0 6px 18px rgba(0,0,0,0.6);}
+    .avatar{width:94px;height:94px;border-radius:8px;background:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b0f27e7b6a0b9c8fef4f1e6f3c6c2f2') center/cover;border:2px solid rgba(255,255,255,0.04);}
+    h1{margin:0;font-size:22px;color:#fff}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .top-right{margin-left:auto;text-align:right}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#ffb86b);color:#0b0a09;font-weight:700;font-size:14px;text-decoration:none;}
+    main{margin-top:18px;display:grid;grid-template-columns:1fr;gap:18px;}
+    section.card{background:var(--card);padding:18px;border-radius:10px;color:#dbe6ea;box-shadow:0 6px 18px rgba(2,6,8,0.6)}
+    h2{margin:0 0 8px;color:#fff;font-size:16px}
+    .about p{color:var(--muted);line-height:1.5}
+    ul.clean{padding:0;margin:8px 0 0;list-style:none}
+    ul.clean li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.03);color:var(--muted);font-size:14px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:6px;color:var(--muted);font-size:13px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px}
+    .proj{border-radius:8px;overflow:hidden;background:#0b0f12;border:1px solid rgba(255,255,255,0.03)}
+    .proj img{width:100%;height:150px;object-fit:cover;display:block;filter:grayscale(10%) contrast(95%)}
+    .proj .meta{padding:10px;color:var(--muted);font-size:13px}
+    footer{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
+    .contact a{color:var(--accent);text-decoration:none;font-weight:600}
+    @media(max-width:720px){.grid-2{grid-template-columns:1fr} header{flex-direction:column;align-items:flex-start} .top-right{text-align:left;width:100%}}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Alejandro Garay</h1>
-    <p>Ingeniero en Construcción | Dibujante Proyectista</p>
-  </header>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true"></div>
+      <div>
+        <h1>Alejandro Luis Garay</h1>
+        <p class="lead">Ingeniero en Construcción • Técnico Universitario Dibujante Proyectista</p>
+        <p style="margin:6px 0 0;color:var(--muted);font-size:13px">Experiencia en proyectos industriales, piping, estructuras y cubicaciones</p>
+      </div>
+      <div class="top-right">
+        <a class="btn" href="CV_AGARAY_25_v2.pdf" target="_blank" rel="noopener">Descargar CV (PDF)</a>
+        <div style="height:8px"></div>
+        <div style="color:var(--muted);font-size:13px">Concepción, Chile</div>
+      </div>
+    </header>
 
-  <section>
-    <h2>Sobre mí</h2>
-    <p>Soy Ingeniero en Construcción y Técnico Dibujante Proyectista con experiencia en proyectos industriales, mecánicos y de infraestructura. 
-       Manejo software como AutoCAD, Inventor y Excel, y complemento mi formación con cursos PAC, ITO y Auditor Interno.</p>
-  </section>
+    <main>
+      <!-- SOBRE MÍ -->
+      <section class="card about">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy Ingeniero en Construcción (2024) y Técnico Universitario Dibujante Proyectista (2014) con más de ocho años de experiencia
+          en la elaboración de planos estructurales, mecánicos y de piping para sectores industriales, mineros y de infraestructura.
+          Mi enfoque es la precisión técnica, la trazabilidad documental y la optimización de procesos de diseño y cubicación.
+        </p>
+      </section>
 
-  <section>
-    <h2>Proyectos Destacados</h2>
-    <ul>
-      <li><strong>MindCo / CAP Huachipato:</strong> Levantamientos estructurales y mecánicos, planos y cubicaciones.</li>
-      <li><strong>Ingemecanic:</strong> Diseño y documentación técnica para proyectos metalmecánicos.</li>
-    </ul>
-  </section>
+      <!-- EXPERIENCIA -->
+      <section class="card">
+        <h2>Experiencia</h2>
+        <div class="grid-2">
+          <div>
+            <ul class="clean">
+              <li><strong>FCA Ingeniería / BHP - Albemarle</strong> — 12/2024 – 03/2025<br><span style="color:var(--muted)">Modelado 3D y dibujo de piping; cubicaciones y levantamientos en terreno.</span></li>
+              <li><strong>IngeMecanic / ENAP - CMPC</strong> — 06/2024 – 12/2024<br><span style="color:var(--muted)">Elaboración de planos estructurales y mecánicos; coordinación en oficina técnica.</span></li>
+              <li><strong>MindCo / Huachipato</strong> — 01/2023 – 05/2024<br><span style="color:var(--muted)">Levantamientos estructurales y mecánicos; planos y cubicaciones.</span></li>
+            </ul>
+          </div>
+          <div>
+            <ul class="clean">
+              <li><strong>Mundo Pacífico</strong> — 12/2018 – 01/2023<br><span style="color:var(--muted)">Diseño FO-Fusiones y GIS; documentación técnica.</span></li>
+              <li><strong>IMC Ingeniería / ENAP</strong> — 02/2017 – 11/2018<br><span style="color:var(--muted)">Isométricos y piping en AutoCAD; soporte en fabricación.</span></li>
+              <li><strong>Macrosteel / LTM / Iproin / Enaex</strong> — 2013–2016<br><span style="color:var(--muted)">Detallamiento de estructuras, dibujo arquitectónico y prácticas técnicas.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-  <section>
-    <h2>Contacto</h2>
-    <p>📧 <a href="mailto:alejandro.garay.acevedo@gmail.com">alejandro.garay.acevedo@gmail.com</a><br>
-       🌍 <a href="https://www.linkedin.com/">LinkedIn</a></p>
-  </section>
+      <!-- HABILIDADES -->
+      <section class="card">
+        <h2>Habilidades y herramientas</h2>
+        <div class="skills" style="margin-top:8px">
+          <span class="chip">AutoCAD (avanzado)</span>
+          <span class="chip">Inventor (3D)</span>
+          <span class="chip">TEKLA Structures</span>
+          <span class="chip">Revit</span>
+          <span class="chip">ArcGIS / QGIS</span>
+          <span class="chip">Cubicaciones / Levantamientos</span>
+          <span class="chip">MS Office (Excel intermedio)</span>
+          <span class="chip">Gestión documental</span>
+        </div>
+      </section>
 
-  <footer>
-    © 2025 Alejandro Garay | Portafolio Profesional
-  </footer>
+      <!-- FORMACIÓN -->
+      <section class="card">
+        <h2>Formación & Cursos</h2>
+        <ul class="clean">
+          <li><strong>Ingeniería en Construcción</strong> — Universidad Federico Santa María (Titulado 2024)</li>
+          <li><strong>Técnico Universitario Dibujante Proyectista</strong> — Universidad Federico Santa María (Titulado 2014)</li>
+          <li><em>En curso:</em> Auditor Interno • PAC (Plan Aseguramiento de Calidad) • Inspector Técnico de Obra (ITO)</li>
+        </ul>
+      </section>
+
+      <!-- PROYECTOS / GALERÍA -->
+      <section class="card">
+        <h2>Proyectos & Trabajos representativos</h2>
+        <div class="projects">
+          <div class="proj">
+            <img src="https://images.unsplash.com/photo-1529429612010-7fcf0f9cc8a4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a1b9d6fe9b2c7ad8f3b1a3f5c8b8c2b" alt="planos">
+            <div class="meta"><strong>Levantamientos estructurales</strong><br><span style="color:var(--muted)">Proyectos industriales y mantenimiento</span></div>
+          </div>
+          <div class="proj">
+            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7f6d6e7d3cc1a1b6f8f9b0c6c2d5f1a8" alt="piping">
+            <div class="meta"><strong>Modelado 3D y Piping</strong><br><span style="color:var(--muted)">Isométricos y planos de instalación</span></div>
+          </div>
+          <div class="proj">
+            <img src="https://images.unsplash.com/photo-1581093588401-5c6b8b1b5f3a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5d2f1b9e3b6c1e8f3b2a8c4b2f1d9c6a" alt="obra">
+            <div class="meta"><strong>Documentación técnica</strong><br><span style="color:var(--muted)">Planos as-built y control documental</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="card contact">
+        <h2>Contacto</h2>
+        <p style="color:var(--muted)">Correo: <a href="mailto:algaray1306@gmail.com">algaray1306@gmail.com</a></p>
+        <p style="color:var(--muted)">LinkedIn: <a href="https://www.linkedin.com" target="_blank" rel="noopener">tu perfil</a></p>
+        <p style="color:var(--muted)">Ubicación: Concepción, Chile — Disponibilidad para traslado</p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="yr"></span> Alejandro Garay — Ingeniería & Dibujo Técnico
+    </footer>
+  </div>
+
+  <script>
+    // Añade el año actual
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
