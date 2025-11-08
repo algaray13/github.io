@@ -76,6 +76,38 @@
       transform: scale(1.05);
     }
 
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 1rem;
+    }
+
+    .project {
+      background: #333;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 6px;
+      transition: 0.4s ease;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .project:hover img {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+    .project h3 {
+      color: #00bcd4;
+      margin-top: 0.5rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -86,13 +118,6 @@
     footer a {
       color: #00bcd4;
       text-decoration: none;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -146,13 +171,24 @@
   </section>
 
   <section>
-    <h2>Proyectos y Experiencia</h2>
-    <p>
-      Experiencia en proyectos estructurales y mecánicos para la industria, realizando modelado 3D, elaboración de planos de fabricación y levantamientos técnicos.
-      Participación en documentación de diseño, control de planos y cubicaciones en diversas etapas del desarrollo.
-    </p>
-    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Levantamientos estructurales">
-    <img src="https://images.unsplash.com/photo-1590393803321-cd69c6b2c746" alt="Documentación técnica">
+    <h2>Proyectos y Experiencias</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=400&q=60" alt="Levantamientos estructurales">
+        <h3>Levantamientos Estructurales</h3>
+        <p>Levantamientos técnicos de estructuras y equipos industriales, con desarrollo de planos de referencia y detalles constructivos.</p>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1581090467553-0813e8d9c222?auto=format&fit=crop&w=400&q=60" alt="Piping industrial">
+        <h3>Piping y Mecánica</h3>
+        <p>Diseño y cubicación de sistemas de cañerías industriales, modelado 3D y generación de planos de fabricación y montaje.</p>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1590393803321-cd69c6b2c746?auto=format&fit=crop&w=400&q=60" alt="Documentación técnica">
+        <h3>Documentación Técnica</h3>
+        <p>Control, revisión y emisión de planos e informes técnicos, asegurando trazabilidad y cumplimiento de estándares.</p>
+      </div>
+    </div>
   </section>
 
   <section style="text-align:center;">
