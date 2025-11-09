@@ -49,7 +49,7 @@
             font-weight: 300;
         }
 
-        /* --- Navegación (Opcional, para secciones) --- */
+        /* --- Navegación --- */
         .navbar {
             background-color: var(--color-secundario);
             padding: 10px 0;
@@ -133,7 +133,7 @@
             font-style: italic;
             color: #777;
             white-space: nowrap;
-            margin-left: 20px; /* Espacio para que no se pegue al título en pantallas chicas */
+            margin-left: 20px;
         }
         .job ul {
             margin-top: 10px;
@@ -179,6 +179,17 @@
             font-size: 0.95em;
             font-weight: 500;
             border: 1px solid var(--color-borde);
+            /* --- Transición añadida --- */
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* --- NUEVO: Efecto Hover para Habilidades --- */
+        .skills-list li:hover {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            transform: translateY(-3px); /* Se eleva ligeramente */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: default;
         }
 
         /* --- Portafolio (Placeholder) --- */
@@ -193,6 +204,12 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Efecto hover también para el portafolio */
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
         .portfolio-item img {
             width: 100%;
@@ -223,8 +240,8 @@
 <body>
 
     <header class="header">
-        <h1>ALEJANDRO LUIS GARAY LARA [cite: 1]</h1>
-        <p>Ingeniero en Construcción y Técnico Universitario Dibujante Proyectista [cite: 4]</p>
+        <h1>ALEJANDRO LUIS GARAY LARA</h1>
+        <p>Ingeniero en Construcción y Técnico Universitario Dibujante Proyectista</p>
     </header>
 
     <nav class="navbar">
@@ -241,13 +258,13 @@
         <section id="resumen" class="section-card">
             <h2>Resumen Profesional</h2>
             <p>
-                Ingeniero en Construcción y Técnico Universitario Dibujante Proyectista, con más de ocho años de experiencia en la elaboración de planos estructurales, mecánicos y de piping, principalmente en los sectores de construcción, minería e infraestructura. [cite: 4]
+                Ingeniero en Construcción y Técnico Universitario Dibujante Proyectista, con más de ocho años de experiencia en la elaboración de planos estructurales, mecánicos y de piping, principalmente en los sectores de construcción, minería e infraestructura.
             </p>
             <p>
-                Con destrezas avanzadas en software técnico como AutoCAD, Inventor y Revit, me especializo en la creación y gestión de proyectos complejos, asegurando precisión y cumplimiento de estándares industriales. [cite: 5]
+                Con destrezas avanzadas en software técnico como AutoCAD, Inventor y Revit, me especializo en la creación y gestión de proyectos complejos, asegurando precisión y cumplimiento de estándares industriales.
             </p>
             <p>
-                Busco integrarme a un equipo técnico donde pueda aportar mi experiencia en diseño y cubicaciones, y seguir creciendo como profesional del área. [cite: 6]
+                Busco integrarme a un equipo técnico donde pueda aportar mi experiencia en diseño y cubicaciones, y seguir creciendo como profesional del área.
             </p>
         </section>
 
@@ -257,151 +274,151 @@
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">Mundo Pacífico [cite: 8]</h3>
-                        <p class="company">Dibujante y Diseñador [cite: 8]</p>
+                        <h3 class="company">Mundo Pacífico</h3>
+                        <p class="company">Dibujante y Diseñador</p>
                     </div>
-                    <span class="date">04/2025 - Actualidad [cite: 8]</span>
+                    <span class="date">04/2025 - Actualidad</span>
                 </div>
                 <ul>
-                    <li>Diseño de planos de redes FO-Fusiones. [cite: 9]</li>
-                    <li>Procesos de cubicación y documentación técnica. [cite: 9]</li>
+                    <li>Diseño de planos de redes FO-Fusiones.</li>
+                    <li>Procesos de cubicación y documentación técnica.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">FCA Ingeniería (Proyecto: BHP-Albemarle) [cite: 10]</h3>
-                        <p class="company">Dibujante Proyectista [cite: 10]</p>
+                        <h3 class="company">FCA Ingeniería (Proyecto: BHP-Albemarle)</h3>
+                        <p class="company">Dibujante Proyectista</p>
                     </div>
-                    <span class="date">12/2024 - 03/2025 [cite: 10]</span>
+                    <span class="date">12/2024 - 03/2025</span>
                 </div>
                 <ul>
-                    <li>Dibujo estructural, mecánico y de piping en Inventor y AutoCAD. [cite: 11]</li>
-                    <li>Cubicaciones y levantamientos en terreno, asegurando precisión y cumplimiento de plazos. [cite: 12]</li>
+                    <li>Dibujo estructural, mecánico y de piping en Inventor y AutoCAD.</li>
+                    <li>Cubicaciones y levantamientos en terreno, asegurando precisión y cumplimiento de plazos.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">IngeMecanic (Proyecto: ENAP - CMPC) [cite: 14]</h3>
-                        <p class="company">Dibujante Proyectista [cite: 14]</p>
+                        <h3 class="company">IngeMecanic (Proyecto: ENAP - CMPC)</h3>
+                        <p class="company">Dibujante Proyectista</p>
                     </div>
-                    <span class="date">06/2024 - 12/2025 [cite: 14]</span>
+                    <span class="date">06/2024 - 12/2025</span>
                 </div>
                 <ul>
-                    <li>Dibujo estructural, mecánico y de piping en Inventor y AutoCAD. [cite: 15]</li>
-                    <li>Cubicaciones y levantamientos en terreno, colaborando con equipos de ingeniería. [cite: 15]</li>
+                    <li>Dibujo estructural, mecánico y de piping en Inventor y AutoCAD.</li>
+                    <li>Cubicaciones y levantamientos en terreno, colaborando con equipos de ingeniería.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">MindCo (Proyecto: Huachipato) [cite: 16]</h3>
-                        <p class="company">Dibujante Proyectista [cite: 16]</p>
+                        <h3 class="company">MindCo (Proyecto: Huachipato)</h3>
+                        <p class="company">Dibujante Proyectista</p>
                     </div>
-                    <span class="date">01/2023 - 05/2024 [cite: 16]</span>
+                    <span class="date">01/2023 - 05/2024</span>
                 </div>
                 <ul>
-                    <li>Elaboración de planos estructurales y mecánicos en Inventor y AutoCAD. [cite: 17]</li>
-                    <li>Cubicaciones y levantamientos técnicos en terreno. [cite: 17]</li>
+                    <li>Elaboración de planos estructurales y mecánicos en Inventor y AutoCAD.</li>
+                    <li>Cubicaciones y levantamientos técnicos en terreno.</li>
                 </ul>
             </div>
             
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">Mundo Pacífico [cite: 18]</h3>
-                        <p class="company">Dibujante y Diseñador [cite: 18]</p>
+                        <h3 class="company">Mundo Pacífico</h3>
+                        <p class="company">Dibujante y Diseñador</p>
                     </div>
-                    <span class="date">12/2018 - 01/2023 [cite: 18]</span>
+                    <span class="date">12/2018 - 01/2023</span>
                 </div>
                 <ul>
-                    <li>Diseño de planos de redes FO-Fusiones. [cite: 18]</li>
-                    <li>Procesos de cubicación y documentación técnica. [cite: 19]</li>
+                    <li>Diseño de planos de redes FO-Fusiones.</li>
+                    <li>Procesos de cubicación y documentación técnica.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">IMC Ingeniería (Proyecto: ENAP) [cite: 20]</h3>
-                        <p class="company">Dibujante Técnico (Piping) [cite: 20]</p>
+                        <h3 class="company">IMC Ingeniería (Proyecto: ENAP)</h3>
+                        <p class="company">Dibujante Técnico (Piping)</p>
                     </div>
-                    <span class="date">02/2017 - 11/2018 [cite: 20]</span>
+                    <span class="date">02/2017 - 11/2018</span>
                 </div>
                 <ul>
-                    <li>Planos técnicos en AutoCAD, incluyendo isométricos y piping. [cite: 21]</li>
-                    <li>Coordinación técnica con profesionales del área. [cite: 21]</li>
+                    <li>Planos técnicos en AutoCAD, incluyendo isométricos y piping.</li>
+                    <li>Coordinación técnica con profesionales del área.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">LTM Ingeniería [cite: 22]</h3>
-                        <p class="company">Dibujante Técnico [cite: 22]</p>
+                        <h3 class="company">LTM Ingeniería</h3>
+                        <p class="company">Dibujante Técnico</p>
                     </div>
-                    <span class="date">10/2016 - 02/2017 [cite: 22]</span>
+                    <span class="date">10/2016 - 02/2017</span>
                 </div>
                 <ul>
-                    <li>Dibujos técnicos en AutoCAD. [cite: 22]</li>
-                    <li>Ploteo y archivado de planos, gestión documental de proyectos. [cite: 23]</li>
+                    <li>Dibujos técnicos en AutoCAD.</li>
+                    <li>Ploteo y archivado de planos, gestión documental de proyectos.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">Macrosteel Ingeniería [cite: 24]</h3>
-                        <p class="company">Dibujante Técnico [cite: 24]</p>
+                        <h3 class="company">Macrosteel Ingeniería</h3>
+                        <p class="company">Dibujante Técnico</p>
                     </div>
-                    <span class="date">10/2015 - 09/2016 [cite: 24]</span>
+                    <span class="date">10/2015 - 09/2016</span>
                 </div>
                 <ul>
-                    <li>Planos de estructuras metálicas en TEKLA Structures, contribuyendo a la precisión en fabricación. [cite: 25]</li>
+                    <li>Planos de estructuras metálicas en TEKLA Structures, contribuyendo a la precisión en fabricación.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">Consultora Iproin Ltda. [cite: 26]</h3>
-                        <p class="company">Dibujante Técnico Arquitectónico [cite: 26]</p>
+                        <h3 class="company">Consultora Iproin Ltda.</h3>
+                        <p class="company">Dibujante Técnico Arquitectónico</p>
                     </div>
-                    <span class="date">12/2014 - 08/2015 [cite: 26]</span>
+                    <span class="date">12/2014 - 08/2015</span>
                 </div>
                 <ul>
-                    <li>Planos arquitectónicos en ArchiCAD y detallamiento técnico de proyectos civiles. [cite: 27]</li>
+                    <li>Planos arquitectónicos en ArchiCAD y detallamiento técnico de proyectos civiles.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">Enaex S.A. (Práctica) [cite: 28]</h3>
-                        <p class="company">Dibujante Técnico [cite: 28]</p>
+                        <h3 class="company">Enaex S.A. (Práctica)</h3>
+                        <p class="company">Dibujante Técnico</p>
                     </div>
-                    <span class="date">01/2014 - 02/2014 [cite: 28]</span>
+                    <span class="date">01/2014 - 02/2014</span>
                 </div>
                 <ul>
-                    <li>Planos de piping e isométricos. [cite: 28]</li>
-                    <li>Ploteo y escaneo de planos. [cite: 29]</li>
+                    <li>Planos de piping e isométricos.</li>
+                    <li>Ploteo y escaneo de planos.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <h3 class="company">Alister S.A. [cite: 30]</h3>
-                        <p class="company">Ayudante Maestro en Estructuras Metálicas [cite: 30]</p>
+                        <h3 class="company">Alister S.A.</h3>
+                        <p class="company">Ayudante Maestro en Estructuras Metálicas</p>
                     </div>
-                    <span class="date">01/2013 - 02/2013 [cite: 30]</span>
+                    <span class="date">01/2013 - 02/2013</span>
                 </div>
                 <ul>
-                    <li>Apoyo en montaje y fabricación de estructuras metálicas. [cite: 31]</li>
+                    <li>Apoyo en montaje y fabricación de estructuras metálicas.</li>
                 </ul>
             </div>
 
@@ -412,23 +429,23 @@
             <section id="educacion" class="section-card">
                 <h2>Educación</h2>
                 <div class="education-item">
-                    <h4>Ingeniería en Construcción [cite: 33]</h4>
-                    <p>Universidad Federico Santa María (2020-2024) [cite: 33]</p>
+                    <h4>Ingeniería en Construcción</h4>
+                    <p>Universidad Federico Santa María (2020-2024)</p>
                 </div>
                 <div class="education-item">
-                    <h4>Técnico Universitario en Dibujo Proyectista [cite: 34]</h4>
-                    <p>Universidad Federico Santa María (2012-2014) [cite: 34]</p>
+                    <h4>Técnico Universitario en Dibujo Proyectista</h4>
+                    <p>Universidad Federico Santa María (2012-2014)</p>
                 </div>
 
                 <h3 style="margin-top: 30px;">Formación Complementaria</h3>
                 <div class="training-item">
-                    <h4>Auditor Interno de Calidad [cite: 36]</h4>
+                    <h4>Auditor Interno de Calidad</h4>
                 </div>
                 <div class="training-item">
-                    <h4>Plan de Aseguramiento de la Calidad (PAC) [cite: 37]</h4>
+                    <h4>Plan de Aseguramiento de la Calidad (PAC)</h4>
                 </div>
                 <div class="training-item">
-                    <h4>Inspector Técnico de Obra (ITO) [cite: 38]</h4>
+                    <h4>Inspector Técnico de Obra (ITO)</h4>
                 </div>
             </section>
 
@@ -437,22 +454,22 @@
                 
                 <h4>Idiomas</h4>
                 <ul class="skills-list" style="margin-bottom: 20px;">
-                    <li>Inglés Técnico (Lectura y Escritura: Nivel Medio) [cite: 40]</li>
+                    <li>Inglés Técnico (Lectura y Escritura: Nivel Medio)</li>
                 </ul>
 
-                <h4>Software [cite: 41]</h4>
+                <h4>Software</h4>
                 <ul class="skills-list">
-                    <li>AutoCAD [cite: 41]</li>
-                    <li>Inventor Pro [cite: 41]</li>
-                    <li>Revit [cite: 41]</li>
-                    <li>Naviswork [cite: 41]</li>
-                    <li>ProCap [cite: 41]</li>
-                    <li>3DS MAX [cite: 41]</li>
-                    <li>ArchiCAD [cite: 41]</li>
-                    <li>TEKLA Structures [cite: 41]</li>
-                    <li>ArcGIS Pro [cite: 41]</li>
-                    <li>QGIS [cite: 41]</li>
-                    <li>MS Excel [cite: 41]</li>
+                    <li>AutoCAD</li>
+                    <li>Inventor Pro</li>
+                    <li>Revit</li>
+                    <li>Naviswork</li>
+                    <li>ProCap</li>
+                    <li>3DS MAX</li>
+                    <li>ArchiCAD</li>
+                    <li>TEKLA Structures</li>
+                    <li>ArcGIS Pro</li>
+                    <li>QGIS</li>
+                    <li>MS Excel</li>
                 </ul>
             </section>
 
@@ -494,9 +511,9 @@
         <section id="contacto" class="section-card">
             <h2>Contacto</h2>
             <ul class="contact-list">
-                <li><strong>Email:</strong> <a href="mailto:algaray1306@gmail.com">algaray1306@gmail.com</a> [cite: 2]</li>
-                <li><strong>Teléfono:</strong> +56 9 50893263 [cite: 2]</li>
-                <li><strong>Ubicación:</strong> Coronel, Concepción, Chile [cite: 2]</li>
+                <li><strong>Email:</strong> <a href="mailto:algaray1306@gmail.com">algaray1306@gmail.com</a></li>
+                <li><strong>Teléfono:</strong> +56 9 50893263</li>
+                <li><strong>Ubicación:</strong> Coronel, Concepción, Chile</li>
                 <li><strong>LinkedIn:</strong> <a href="#">(Añade aquí tu enlace de LinkedIn)</a></li>
             </ul>
         </section>
